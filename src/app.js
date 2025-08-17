@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.static("public"));
 
 // Routes
+
+import userRouter from "./routes/user.routes.js";
+app.use("/api/v1/user", userRouter);
 // app.use("/api/auth", require("./routes/auth"));
 // app.use("/api/user", require("./routes/user"));
 // app.use("/api/video", require("./routes/video"));
